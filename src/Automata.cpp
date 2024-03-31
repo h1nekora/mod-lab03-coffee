@@ -8,13 +8,13 @@ Automata::Automata() {
     cash = 0;
     state = OFF;
     menu = { "Espresso",
-	"Cappuccino",
-	"Latte",
-	"Cacao",
-	"Hot chocolate",
-	"Americano",
-	"Black tea",
-	"Green tea" };
+    "Cappuccino",
+    "Latte",
+    "Cacao",
+    "Hot chocolate",
+    "Americano",
+    "Black tea",
+    "Green tea" };
     prices = { 100, 150, 180, 50, 75, 110, 80, 80 };
 }
 Automata::~Automata() {}
@@ -38,7 +38,8 @@ void Automata::getMenu() {
     if (state == WAIT || state == ACCEPT) {
     std::cout << "MENU: ";
     for (int index = 0; index < menu.size(); index++) {
-        std::cout << index+1 << ") " << menu[index] << " " << prices[index] << " | ";
+    std::cout << index+1 << ") " << menu[index];
+    std::cout << " " << prices[index] << " | ";
     }
     std::cout<< std::endl;
     }
@@ -56,8 +57,7 @@ void Automata::check(int variant) {
     if (cash >= prices[variant - 1]) {
     cash -= prices[variant - 1];
     cook();
-    }
-    else {
+    } else {
     state = ACCEPT;
     }
 }
