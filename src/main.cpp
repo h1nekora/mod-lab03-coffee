@@ -2,8 +2,7 @@
 #include <iostream>
 #include"Automata.h"
 
-int main()
-{
+int main(){
     Automata automat;
     automat.on();
     automat.getMenu();
