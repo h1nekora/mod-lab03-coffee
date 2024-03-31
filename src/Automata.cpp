@@ -1,7 +1,7 @@
 #include "Automata.h"
-#include <string>;
-#include<vector>;
-#include<iostream>;
+#include <string>
+#include<vector>
+#include<iostream>
 
 Automata::Automata() {
 	cash = 0;
