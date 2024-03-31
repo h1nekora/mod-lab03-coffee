@@ -1,5 +1,6 @@
 #include <iostream>
 #include"Automata.h"
+
 int main()
 {
     Automata automat;
